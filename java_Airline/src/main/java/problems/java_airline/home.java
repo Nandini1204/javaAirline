@@ -55,8 +55,6 @@ public class home extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vaidik\\Downloads\\aeroplane4.jpg")); // NOI18N
-
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
@@ -80,6 +78,11 @@ public class home extends javax.swing.JFrame {
 
         jMenu1.setForeground(new java.awt.Color(0, 51, 255));
         jMenu1.setText("AIRLINE SYSTEM");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setText("FLIGHT_INFO");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,12 +101,22 @@ public class home extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("JOURNEY_DETAILS");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setText("PAYMENT_DETAILS");
         jMenu1.add(jMenuItem4);
 
         jMenuItem5.setText("CANCELLATION");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
 
         jMenuBar1.add(jMenu1);
@@ -159,6 +172,27 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+         
+
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+
+        // TODO add your handling code here:
+        Cancel can=new Cancel();
+         jDesktopPane1.add(can);
+         can.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        Journey_Details det = new  Journey_Details();
+        jDesktopPane1.add(det);
+        det.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
